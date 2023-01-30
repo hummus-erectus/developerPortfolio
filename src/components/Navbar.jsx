@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react'
 import resume from '../files/resume.pdf'
+import { FaGithub } from 'react-icons/fa'
+import { FaLinkedin } from 'react-icons/fa'
+
+ 
 
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-    //Currently not doing anything
     const [activeLink, setActiveLink] = useState ('home')
-    const [scrolled, setScrolled] = useState(false)
+    // const [scrolled, setScrolled] = useState(false)
 
     useEffect(() => {
         const handleClick = (e) => {
@@ -18,24 +21,24 @@ function Navbar() {
         return () => document.removeEventListener('click', handleClick)
       }, [])
 
-    useEffect(() => {
-    const onScroll = () => {
-        if (window.scrollY > 50) {
-        setScrolled(true)
-        } else {
-        setScrolled(false)
-        }
-    }
-    window.addEventListener("scroll", onScroll)
-    return () => window.removeEventListener("scroll", onScroll)
-    }, [])
+    // useEffect(() => {
+    // const onScroll = () => {
+    //     if (window.scrollY > 50) {
+    //     setScrolled(true)
+    //     } else {
+    //     setScrolled(false)
+    //     }
+    // }
+    // window.addEventListener("scroll", onScroll)
+    // return () => window.removeEventListener("scroll", onScroll)
+    // }, [])
 
     const onUpdateActiveLink = (value) => {
         setActiveLink(value);
     }
 
     return (
-        <nav className={`navbar fixed top-0 bg-neutral z-50 ${scrolled ? 'scrolled': ''}`}>
+        <nav className='navbar fixed top-0 bg-neutral z-50'>
             <div className="navbar-start">
                 <div className="dropdown">
                     <button className="btn md:hidden" onClick={() => isMenuOpen ? setIsMenuOpen(false) : setIsMenuOpen(true) }>
@@ -43,10 +46,10 @@ function Navbar() {
                     </button>
                     <div className={`menu menu-compact dropdown-content mt-3 p-2 shadow bg-neutral rounded-box w-52 ${isMenuOpen ? 'block' : 'hidden'}`}>
                         <ul onClick={() => setIsMenuOpen(false)}>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#skills">Skills</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#about" onClick={() => onUpdateActiveLink('about')}>About</a></li>
+                            <li><a href="#skills"  onClick={() => onUpdateActiveLink('skills')}>Skills</a></li>
+                            <li><a href="#projects"  onClick={() => onUpdateActiveLink('projects')}>Projects</a></li>
+                            <li><a href="#contact"  onClick={() => onUpdateActiveLink('contact')}>Contact</a></li>
                         </ul>
                         <hr/>
                         <ul onClick={() => setIsMenuOpen(false)}>
@@ -55,14 +58,16 @@ function Navbar() {
                         </ul>
                     </div>
                 </div>
-                <a href="#"className="btn btn-ghost normal-case text-xl">Robert Grayson</a>
+                <a href="#"className="btn  normal-case text-xl" onClick={() => onUpdateActiveLink('')}>Robert Grayson</a>
             </div>
             <div className="navbar-center hidden md:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a href="#about" onClick={() => onUpdateActiveLink('about')}>About</a></li>
-                    <li><a href="#skills"  onClick={() => onUpdateActiveLink('skills')}>Skills</a></li>
-                    <li><a href="#projects"  onClick={() => onUpdateActiveLink('projects')}>Projects</a></li>
-                    <li><a href="#contact"  onClick={() => onUpdateActiveLink('contact')}>Contact</a></li>
+                    <li><a href="#about" className={activeLink === 'about' ? 'btn-info' : 'undefined'} onClick={() => onUpdateActiveLink('about')}>About</a></li>
+                    <li><a href="#skills"  className={activeLink === 'skills' ? 'btn-info' : 'undefined'} onClick={() => onUpdateActiveLink('skills')}>Skills</a></li>
+                    <li><a href="#projects" className={activeLink === 'projects' ? 'btn-info' : 'undefined'} onClick={() => onUpdateActiveLink('projects')}>Projects</a></li>
+                    <li><a href="#contact" className={activeLink === 'contact' ? 'btn-info' : 'undefined'} onClick={() => onUpdateActiveLink('contact')}>Contact</a></li>
+                    <li><a href='https://www.linkedin.com/in/rob-grayson/' target="_blank" className='ml-2 lg:ml-10'><FaLinkedin /></a></li>
+                    <li><a href='https://github.com/hummus-erectus' target="_blank"><FaGithub /></a></li>
                 </ul>
             </div>
             <div className="navbar-end">
