@@ -62,10 +62,10 @@ function Navbar() {
             </div>
             <div className="navbar-center hidden md:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a href="#about" className={activeLink === 'about' ? 'btn-info' : 'undefined'} onClick={() => onUpdateActiveLink('about')}>About</a></li>
-                    <li><a href="#skills"  className={activeLink === 'skills' ? 'btn-info' : 'undefined'} onClick={() => onUpdateActiveLink('skills')}>Skills</a></li>
-                    <li><a href="#projects" className={activeLink === 'projects' ? 'btn-info' : 'undefined'} onClick={() => onUpdateActiveLink('projects')}>Projects</a></li>
-                    <li><a href="#contact" className={activeLink === 'contact' ? 'btn-info' : 'undefined'} onClick={() => onUpdateActiveLink('contact')}>Contact</a></li>
+                    <li><a href="#about" className={activeLink === 'about' ? 'btn-secondary text-neutral' : 'undefined'} onClick={() => onUpdateActiveLink('about')}>About</a></li>
+                    <li><a href="#skills"  className={activeLink === 'skills' ? 'btn-secondary text-neutral' : 'undefined'} onClick={() => onUpdateActiveLink('skills')}>Skills</a></li>
+                    <li><a href="#projects" className={activeLink === 'projects' ? 'btn-secondary text-neutral' : 'undefined'} onClick={() => onUpdateActiveLink('projects')}>Projects</a></li>
+                    <li><a href="#contact" className={activeLink === 'contact' ? 'btn-secondary text-neutral' : 'undefined'} onClick={() => onUpdateActiveLink('contact')}>Contact</a></li>
                     <li><a href='https://www.linkedin.com/in/rob-grayson/' target="_blank" className='ml-2 lg:ml-10'><FaLinkedin /></a></li>
                     <li><a href='https://github.com/hummus-erectus' target="_blank"><FaGithub /></a></li>
                 </ul>

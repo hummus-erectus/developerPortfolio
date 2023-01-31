@@ -1,12 +1,12 @@
 import { FaHtml5, FaCss3Alt, FaReact, FaGitAlt, FaGithub, FaFigma, FaGraduationCap } from "react-icons/fa"
-import { SiJavascript, SiFirebase, SiTailwindcss, SiVite, SiJquery } from "react-icons/si"
+import { SiJavascript, SiFirebase, SiTailwindcss, SiVite, SiVisualstudio } from "react-icons/si"
 import { SlSpeech } from "react-icons/sl"
 import { MdDevices } from "react-icons/md"
 import { HiLightBulb } from "react-icons/hi"
 
 function Skills() {
   return (
-    <section id='skills' className="my-10 mx-auto w-[95%] md:w-auto container rounded-[50px] bg-neutral p-8">
+    <section id='skills' className="my-10 scroll-mt-[96px] mx-auto w-[95%] md:w-auto container rounded-[50px] bg-neutral p-8">
         <div className="text-center">
             <h1 className="mb-5 text-3xl text-[#1EB854] font-bold">Skills and Tools</h1>
             <p className="mb-5 text-base ">I am equipped with the following languages, libraries and technologies to help get your project over the finish line:</p>  
@@ -31,9 +31,9 @@ function Skills() {
                 </div>
                 <div className="grid mx-auto">
                     <figure className="text-5xl mx-auto">
-                        <SiJquery />
+                        <SiVisualstudio />
                     </figure>
-                    <figcaption className="text-sm">jQuery</figcaption>
+                    <figcaption className="text-sm">VSCode</figcaption>
                 </div>
                 <div className="grid mx-auto">
                     <figure className="text-5xl mx-auto">
@@ -90,7 +90,7 @@ function Skills() {
                     <figure className="text-[100px] mx-auto">
                         <SlSpeech />
                     </figure>
-                    <figcaption className="text-[#1EB854] font-bold my-2">Communication</figcaption>
+                    <figcaption className="text-info font-bold my-2">Communication</figcaption>
                     <ul className="text-left">
                         <li>
                             <ul className="list-disc">
@@ -101,15 +101,15 @@ function Skills() {
                             </ul>
                         </li>
                         <br />
-                        <li><span className="text-[#1EB854]">English level:</span> Native</li>
-                        <li><span className="text-[#1EB854]">Japanese level:</span> Conversational</li>
+                        <li><span className="text-info">English level:</span> Native</li>
+                        <li><span className="text-info">Japanese level:</span> Conversational</li>
                     </ul>
                 </div>
                 <div className="grid mx-auto">
                     <figure className="text-[100px] mx-auto">
                         <FaGraduationCap />
                     </figure>
-                    <figcaption className="text-[#1EB854] font-bold my-2">Instructional Design</figcaption>
+                    <figcaption className="text-info font-bold my-2">Instructional Design</figcaption>
                     <ul className="text-left">
                         <li>
                             <ul className="list-disc">
@@ -124,7 +124,7 @@ function Skills() {
                     <figure className="text-[100px] mx-auto">
                         <HiLightBulb />
                     </figure>
-                    <figcaption className="text-[#1EB854] font-bold my-2">Problem-solving and planning</figcaption>
+                    <figcaption className="text-info font-bold my-2">Problem-solving and planning</figcaption>
                     <ul className="text-left">
                         <li>
                             <ul className="list-disc">
