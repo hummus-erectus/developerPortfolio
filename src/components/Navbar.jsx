@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react'
 import resume from '../files/resume.pdf'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
- 
-
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [activeLink, setActiveLink] = useState ('home')
@@ -16,7 +14,7 @@ function Navbar() {
         }
         document.addEventListener('click', handleClick);
         return () => document.removeEventListener('click', handleClick)
-      }, [])
+    }, [])
 
     const onUpdateActiveLink = (value) => {
         setActiveLink(value);
@@ -59,7 +57,6 @@ function Navbar() {
                 <a className="btn normal-case btn-primary" href={resume} download="Robert Grayson CV">Download CV</a>
             </div>
         </nav>
-
     )
 }
 
