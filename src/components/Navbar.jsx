@@ -6,9 +6,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-
     const [activeLink, setActiveLink] = useState ('home')
-    // const [scrolled, setScrolled] = useState(false)
 
     useEffect(() => {
         const handleClick = (e) => {
@@ -19,18 +17,6 @@ function Navbar() {
         document.addEventListener('click', handleClick);
         return () => document.removeEventListener('click', handleClick)
       }, [])
-
-    // useEffect(() => {
-    // const onScroll = () => {
-    //     if (window.scrollY > 50) {
-    //     setScrolled(true)
-    //     } else {
-    //     setScrolled(false)
-    //     }
-    // }
-    // window.addEventListener("scroll", onScroll)
-    // return () => window.removeEventListener("scroll", onScroll)
-    // }, [])
 
     const onUpdateActiveLink = (value) => {
         setActiveLink(value);
