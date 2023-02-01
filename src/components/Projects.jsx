@@ -8,12 +8,12 @@ function Projects() {
     return (
         <section id='projects' className="my-10 scroll-mt-[96px] mx-auto w-[95%] md:w-auto container rounded-[50px] bg-neutral p-8">
             <div>
-                <h1 className="mb-5 text-3xl text-[#1EB854] font-bold text-center">Projects</h1>
+                <h2 className="mb-5 text-3xl text-[#1EB854] font-bold text-center">Projects</h2>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-start">
                     
-                    <label htmlFor="project1">
+                    <label htmlFor="project1" className="h-full flex justify-center align-center card col-span-1 cursor-pointer bg-base-100 transition-transform duration-200 hover:scale-105">
                         {/* To add shadow transform: transition-shadow duration-200 hover:shadow-lg hover:shadow-neutral-content */}
-                        <div className="card cursor-pointer bg-base-100 transition-transform duration-200 hover:scale-105">
+                        
                             <figure><img src={toeflScreen} alt="TOEFL Speaking App"/></figure>
                             <div className="card-body">
                                 <h2 className="card-title text-info">
@@ -25,7 +25,7 @@ function Projects() {
                                     <div className="badge badge-outline">Custom API</div>
                                 </div>
                             </div>
-                        </div>
+                        
                     </label>
                     
                     <input type="checkbox" id="project1" className="modal-toggle" />
@@ -59,10 +59,10 @@ function Projects() {
 
 
 
-                    <label htmlFor="project2">
-                        <div className="card cursor-pointer bg-base-100 transition-transform duration-200 hover:scale-105">
+                    <label htmlFor="project2" className="h-full flex justify-center align-center card col-span-1 cursor-pointer bg-base-100 transition-transform duration-200 hover:scale-105">
+                       
                             <figure><img src={pokereactScreen} alt="PokéReact" className=''/></figure>
-                            <div className="card-body">
+                            <div className="card-body ">
                                 <h2 className="card-title text-info">
                                     PokéReact
                                 </h2>
@@ -73,8 +73,9 @@ function Projects() {
                                     <div className="badge badge-outline">RESTful API</div>
                                 </div>
                             </div>
-                        </div>
+                        
                     </label>
+
                     <input type="checkbox" id="project2" className="modal-toggle" />
                     <div className="modal">
                         <div className="modal-box relative max-w-[1440px]">
@@ -103,13 +104,13 @@ function Projects() {
                         </div>
                     </div>
 
-                    <div className="cursor-pointer transition-transform duration-200 hover:scale-105">
+                    <div className="h-full w-full flex justify-center items-center sm:col-span-2 lg:col-span-1 lg:pb-20">
                         <a href='https://github.com/hummus-erectus' target="_blank">
-                            <div className="">
-                                <figure className='text-[150px]'><FaGithub /></figure>
-                                <h2 className="">
+                            <div className="grid cursor-pointer transition-transform duration-200 hover:scale-105 ">
+                                <figure className='flex text-[120px] justify-center mb-6'><FaGithub /></figure>
+                                <h3 className="font-bold">
                                     See more projects on GitHub
-                                </h2>
+                                </h3>
                             </div>
                         </a>
                     </div>

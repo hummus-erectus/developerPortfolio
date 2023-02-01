@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import resume from '../files/resume.pdf'
-import { FaGithub } from 'react-icons/fa'
-import { FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
  
 

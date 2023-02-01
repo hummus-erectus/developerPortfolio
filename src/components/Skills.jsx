@@ -8,7 +8,7 @@ function Skills() {
   return (
     <section id='skills' className="my-10 scroll-mt-[96px] mx-auto w-[95%] md:w-auto container rounded-[50px] bg-neutral p-8">
         <div className="text-center">
-            <h1 className="mb-5 text-3xl text-[#1EB854] font-bold">Skills and Tools</h1>
+            <h2 className="mb-5 text-3xl text-[#1EB854] font-bold">Skills and Tools</h2>
             <p className="mb-5 text-base ">I am equipped with the following languages, libraries and technologies to help get your project over the finish line:</p>  
             <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-12 gap-3">
                 <div className="grid mx-auto">
@@ -120,7 +120,7 @@ function Skills() {
                         </li>
                     </ul>
                 </div>
-                <div className="grid mx-auto">
+                <div className="grid mx-auto sm:col-span-2 lg:col-span-1">
                     <figure className="text-[100px] mx-auto">
                         <HiLightBulb />
                     </figure>
