@@ -4,6 +4,8 @@ import Skills from "./components/Skills"
 import Projects from "./components/Projects"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
+import { ToastContainer } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css'
 import mountains from './assets/mountains.jpg'
 
 function App() {
@@ -16,7 +18,8 @@ function App() {
       <Skills />
       <Projects />
       <Contact />
-      <Footer />      
+      <Footer />   
+      <ToastContainer />   
     </div>
   )
 }

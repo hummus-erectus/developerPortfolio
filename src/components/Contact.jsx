@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { toast } from 'react-toastify'
 
 function Contact() {
 
@@ -21,9 +22,25 @@ function Contact() {
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({ "form-name": "contact", name, email, message }),
         })
-          .then(() => alert("Message sent!"))
-          .catch((error) => alert(error))
+          .then(() => {
+            toast.success('Message sent!')
+            setName('')
+            setEmail('')
+            setMessage('')
+            })
+          .catch((error) => {
+            toast.error("Oops! Something went wrong.")
+            console.log(error)
+          })
     }
+
+    const customAlert = (message) => {
+        return (
+          <div className="bg-red-500 text-white p-4 rounded-lg">
+            {message}
+          </div>
+        );
+      };
 
     return (
         <section id='contact' className="my-10 scroll-mt-[96px] mx-auto w-[95%] md:w-auto container rounded-[50px] bg-neutral p-8 items-center">
@@ -48,8 +65,10 @@ function Contact() {
                         type="text"
                         id="name"
                         name="name"
+                        value={name}
                         className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                         onChange={(e) => setName(e.target.value)}
+                        required
                         />
                     </div>
                     <div className="relative mb-4">
@@ -60,8 +79,10 @@ function Contact() {
                         type="email"
                         id="email"
                         name="email"
+                        value={email}
                         className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                         onChange={(e) => setEmail(e.target.value)}
+                        required
                         />
                     </div>
                     <div className="relative mb-4">
@@ -73,8 +94,11 @@ function Contact() {
                         <textarea
                         id="message"
                         name="message"
+                        value={message}
                         className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                         onChange={(e) => setMessage(e.target.value)}
+                        maxLength={10000}
+                        required
                         />
                     </div>
                     <button
