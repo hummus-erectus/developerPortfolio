@@ -2,12 +2,11 @@ import { useState, useEffect } from 'react'
 import * as Scroll from 'react-scroll'
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import resume from '../files/resume.pdf'
-// import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [theme, setTheme] = useState('emerald')
-    
+
     const toggleTheme = () => {
         setTheme(theme === 'emerald' ? 'forest' : 'emerald')
     }
@@ -58,8 +57,6 @@ function Navbar() {
                     <li><Link activeClass="active" spy={true} smooth={true} offset={-94} to="skills">Skills</Link></li>
                     <li><Link activeClass="active" spy={true} smooth={true} offset={-94} to="projects">Projects</Link></li>
                     <li><Link activeClass="active" spy={true} smooth={true} offset={-94} to="contact">Contact</Link></li>
-                    {/* <li><a href='https://www.linkedin.com/in/rob-grayson/' target="_blank" className='ml-2 lg:ml-10'><FaLinkedin /></a></li>
-                    <li><a href='https://github.com/hummus-erectus' target="_blank"><FaGithub /></a></li> */}
                 </ul>
             </div>
             <div className="navbar-end">

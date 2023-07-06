@@ -9,7 +9,7 @@ function Footer() {
                     <a href='https://www.linkedin.com/in/rob-grayson/' target="_blank" ><FaLinkedin /></a>
                     <a href='https://github.com/hummus-erectus' target="_blank"><FaGithub /></a>
                 </div>
-            </div> 
+            </div>
             <div>
                 <p>© {currentYear} Robert Grayson - All rights reserved.</p>
             </div>

@@ -11,10 +11,7 @@ function Projects() {
             <div>
                 <h2 className="mb-5 text-3xl text-primary font-bold text-center">Projects</h2>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 place-items-start">
-
                     <label htmlFor="project1" className="h-full flex justify-center align-center card col-span-1 cursor-pointer bg-secondary transition-transform duration-200 hover:scale-105">
-                        {/* To add shadow transform: transition-shadow duration-200 hover:shadow-lg hover:shadow-neutral-content */}
-
                             <figure><img src={lemonScreen} alt="Little Lemon Restaurant"/></figure>
                             <div className="card-body text-secondary-content">
                                 <h2 className="card-title">
@@ -28,9 +25,7 @@ function Projects() {
                                     <div className="badge badge-outline">Firebase</div>
                                 </div>
                             </div>
-
                     </label>
-
                     <input type="checkbox" id="project1" className="modal-toggle" />
                     <div className="modal">
                         <div className="modal-box relative max-w-[1440px]">
@@ -59,9 +54,7 @@ function Projects() {
                             </div>
                         </div>
                     </div>
-
                     <label htmlFor="project2" className="h-full flex justify-center align-center card col-span-1 cursor-pointer bg-secondary transition-transform duration-200 hover:scale-105">
-
                             <figure><img src={toeflScreen} alt="TOEFL Speaking App"/></figure>
                             <div className="card-body text-secondary-content">
                                 <h2 className="card-title">
@@ -73,9 +66,7 @@ function Projects() {
                                     <div className="badge badge-outline">Custom API</div>
                                 </div>
                             </div>
-
                     </label>
-
                     <input type="checkbox" id="project2" className="modal-toggle" />
                     <div className="modal">
                         <div className="modal-box relative max-w-[1440px]">
@@ -103,12 +94,7 @@ function Projects() {
                             </div>
                         </div>
                     </div>
-
-
-
-
                     <label htmlFor="project3" className="h-full flex justify-center align-center card col-span-1 cursor-pointer bg-secondary transition-transform duration-200 hover:scale-105">
-
                             <figure><img src={pokereactScreen} alt="PokéReact" className=''/></figure>
                             <div className="card-body text-secondary-content ">
                                 <h2 className="card-title">
@@ -121,9 +107,7 @@ function Projects() {
                                     <div className="badge badge-outline">RESTful API</div>
                                 </div>
                             </div>
-
                     </label>
-
                     <input type="checkbox" id="project3" className="modal-toggle" />
                     <div className="modal">
                         <div className="modal-box relative max-w-[1440px]">
@@ -151,7 +135,6 @@ function Projects() {
                             </div>
                         </div>
                     </div>
-
                     <div className="h-full w-full flex justify-center items-center lg:col-span-3 xl:col-span-1 lg:pb-20">
                         <a href='https://github.com/hummus-erectus' target="_blank">
                             <div className="grid cursor-pointer transition-transform duration-200 hover:scale-105 ">
@@ -162,7 +145,6 @@ function Projects() {
                             </div>
                         </a>
                     </div>
-
                 </div>
             </div>
         </section>

@@ -9,7 +9,7 @@ function Skills() {
     <section id='skills' className="my-10 scroll-mt-[96px] mx-auto w-[95%] md:w-auto container rounded-[50px] bg-base-100 p-8">
         <div className="text-center">
             <h2 className="mb-5 text-3xl text-primary font-bold">Skills and Tools</h2>
-            <p className="mb-5 text-base-content ">I am equipped with the following languages, libraries and technologies to help get your project over the finish line:</p>  
+            <p className="mb-5 text-base-content ">I am equipped with the following languages, libraries and technologies to help get your project over the finish line:</p>
             <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-12 gap-3">
                 <div className="grid mx-auto">
                     <figure className="text-5xl mx-auto">
@@ -84,7 +84,7 @@ function Skills() {
                     <figcaption className="text-sm">Responsive Design</figcaption>
                 </div>
             </div>
-            <p className="mb-5 mt-5 text-base-content ">The following are some of the key professional and soft skills I have developed along my journey:</p>  
+            <p className="mb-5 mt-5 text-base-content ">The following are some of the key professional and soft skills I have developed along my journey:</p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-start">
                 <div className="grid mx-auto">
                     <figure className="text-[100px] mx-auto">
