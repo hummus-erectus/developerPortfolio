@@ -1,11 +1,45 @@
 import toeflScreen from '../assets/toeflScreen.webp'
 import pokereactScreen from '../assets/pokereactScreen.webp'
 import lemonScreen from '../assets/lemonScreen.webp'
+import quizScreen from '../assets/quizScreen.webp'
 import { FaGithub } from "react-icons/fa"
 
 const projects = [
   {
     id: "project1",
+    image: quizScreen,
+    title: "Quiz App",
+    description: "Full-stack MERN application",
+    badges: ["React", "Redux Toolkit", "MongoDB", "Node.js"],
+    modalContent: (
+      <>
+        <h3 className="text-2xl font-bold text-center text-primary mb-10">Quiz App</h3>
+        <div className='grid lg:grid-cols-2 gap-8 mb-10'>
+          <div className='grid items-center justify-center'>
+            <h4 className="text-lg font-bold text-info">Brief</h4>
+            <p className="py-4">A web app for creating, editing and taking quizzes. Users can use voice commands to control the flow of the quiz.</p>
+            <a className="btn normal-case btn-primary w-48" href="https://quizapp.fly.dev/" target="_blank">Visit site</a>
+          </div>
+          <a href="https://quizapp.fly.dev/" target="_blank" className='order-first lg:order-last'>
+            <img className="drop-shadow-lg" src={quizScreen} alt="Quiz App"/>
+          </a>
+        </div>
+        <div>
+          <h4 className="text-lg font-bold text-info">Story</h4>
+          <p className="py-4">While studying for the Japanese Language Proficiency Test (JLPT) it occurred to me that it would be helpful to be able to test myself on questions from the exam while doing something else, such as housework. My solution was to build a web app that would allow users to take a quiz using their voice.
+          <br/><br/>
+          The actual quiz portion is very simple, presenting users with multiple-choice questions and tracking their scores. It is possible to display incorrectly-answered questions at the end of the quiz. I integrated the <code className='text-primary'>react-speech-recognition</code> node package to allow voice controls, though as of writing this functionality is only considered stable in the Chrome browser.
+          <br/><br/>
+          To handle the management of quizzes and users, I built a backend using <code className='text-primary'>Node.js</code>, <code className='text-primary'>Express</code> and <code className='text-primary'>MongoDB</code>. I created various endpoints to allow the addition, editing and deletion of quizzes and individual questions, plus a system for registering and logging in users. I also added the ability for users to 'like' quizzes and thus add them to their list of favorites.
+          <br/><br/>
+          The simple frontend uses <code className='text-primary'>styled-components</code> as a means of applying <code className='text-primary'>CSS</code>. I enjoyed experimenting with this approach and appreciated how it allows for modular design that groups form and function in an intuitive way. For advanced state management, such as tracking the logged-on user, I used <code className='text-primary'>Redux Toolkit</code>.
+          </p>
+        </div>
+      </>
+    ),
+  },
+  {
+    id: "project2",
     image: lemonScreen,
     title: "Little Lemon Restaurant (WIP)",
     description: "Capstone project for Meta Front-End Developer Professional Certificate, with added back-end features",
@@ -38,7 +72,7 @@ const projects = [
     ),
   },
   {
-    id: "project2",
+    id: "project3",
     image: toeflScreen,
     title: "TOEFL Speaking App",
     description: "Web app for students to practice the independent speaking section of the TOEFL exam",
@@ -69,38 +103,38 @@ const projects = [
       </>
     ),
   },
-  {
-    id: "project3",
-    image: pokereactScreen,
-    title: "PokéReact",
-    description: "Fetches data from PokeApi and displays as a classic Pokémon card",
-    badges: ["React", "Tailwind CSS", "RESTful API"],
-    modalContent: (
-      <>
-        <h3 className="text-2xl font-bold text-center text-primary mb-10">PokéReact</h3>
-        <div className='grid lg:grid-cols-2 gap-8 mb-10'>
-          <div className='grid items-center justify-center'>
-            <h4 className="text-lg font-bold text-info">Brief</h4>
-            <p className="py-4">A web app for practicing TOEFL independent speaking questions. The user can select a question from a list, choose a question at random, or input their own question. The question will appear on screen along with a &#40;customizable&#41; timer. Users have the option of allowing the app to access their microphone, recording their answer and displaying the three most recent recordings for them to download.</p>
-            <a className="btn normal-case btn-primary w-48" href="https://toefl-speaking.netlify.app/" target="_blank">Visit site</a>
-          </div>
-          <a href="https://toefl-speaking.netlify.app/" target="_blank" className='order-first lg:order-last'>
-            <img className="drop-shadow-lg" src={toeflScreen} alt="TOEFL Speaking App"/>
-          </a>
-        </div>
-        <div>
-          <h4 className="text-lg font-bold text-info">Story</h4>
-          <p className="py-4">As a TOEFL teacher, I often have students practice timed speaking exercises in the classroom, but the usual method of setting up a timer and writing a question on the board is inefficient. I wanted to create a tool that would allow teachers to use a classroom PC and projector to quickly load a question or compose their own. 
-          <br/><br/>
-          As motivated students often ask how they can improve their speaking skills at home, I decided to extend the project so it would be student-friendly. I designed the interface to be simple to understand and use. I also added a 'tips' section to give students advice on how to complete the task.
-          <br/><br/>
-          I learned a lot through making this project. At first, refreshing the page when it displayed a question would return users to the question select page, requiring them to choose a question from scratch. I implemented <code className='text-primary'>react-router</code> to deal with this issue and allow back-button functionality. I also made use of <code className='text-primary'>session-storage</code> to keep the currently-selected question in memory.
-          <br/><br/>
-          To gain experience with APIs I choose to move the question data to a separate <code className='text-primary'>static API</code> that I could add questions to at a later date. I am currently in the process of increasing the number of stock questions by feeding appropriate prompts to <code className='text-primary'>ChatGPT</code> and curating the results.</p>
-        </div>
-      </>
-    ),
-  },
+  // {
+  //   id: "project4",
+  //   image: pokereactScreen,
+  //   title: "PokéReact",
+  //   description: "Fetches data from PokeApi and displays as a classic Pokémon card",
+  //   badges: ["React", "Tailwind CSS", "RESTful API"],
+  //   modalContent: (
+  //     <>
+  //       <h3 className="text-2xl font-bold text-center text-primary mb-10">PokéReact</h3>
+  //       <div className='grid lg:grid-cols-2 gap-8 mb-10'>
+  //         <div className='grid items-center justify-center'>
+  //           <h4 className="text-lg font-bold text-info">Brief</h4>
+  //           <p className="py-4">A web app for practicing TOEFL independent speaking questions. The user can select a question from a list, choose a question at random, or input their own question. The question will appear on screen along with a &#40;customizable&#41; timer. Users have the option of allowing the app to access their microphone, recording their answer and displaying the three most recent recordings for them to download.</p>
+  //           <a className="btn normal-case btn-primary w-48" href="https://toefl-speaking.netlify.app/" target="_blank">Visit site</a>
+  //         </div>
+  //         <a href="https://toefl-speaking.netlify.app/" target="_blank" className='order-first lg:order-last'>
+  //           <img className="drop-shadow-lg" src={toeflScreen} alt="TOEFL Speaking App"/>
+  //         </a>
+  //       </div>
+  //       <div>
+  //         <h4 className="text-lg font-bold text-info">Story</h4>
+  //         <p className="py-4">As a TOEFL teacher, I often have students practice timed speaking exercises in the classroom, but the usual method of setting up a timer and writing a question on the board is inefficient. I wanted to create a tool that would allow teachers to use a classroom PC and projector to quickly load a question or compose their own. 
+  //         <br/><br/>
+  //         As motivated students often ask how they can improve their speaking skills at home, I decided to extend the project so it would be student-friendly. I designed the interface to be simple to understand and use. I also added a 'tips' section to give students advice on how to complete the task.
+  //         <br/><br/>
+  //         I learned a lot through making this project. At first, refreshing the page when it displayed a question would return users to the question select page, requiring them to choose a question from scratch. I implemented <code className='text-primary'>react-router</code> to deal with this issue and allow back-button functionality. I also made use of <code className='text-primary'>session-storage</code> to keep the currently-selected question in memory.
+  //         <br/><br/>
+  //         To gain experience with APIs I choose to move the question data to a separate <code className='text-primary'>static API</code> that I could add questions to at a later date. I am currently in the process of increasing the number of stock questions by feeding appropriate prompts to <code className='text-primary'>ChatGPT</code> and curating the results.</p>
+  //       </div>
+  //     </>
+  //   ),
+  // },
 ]
 
 function Project({ project }) {
