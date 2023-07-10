@@ -1,7 +1,7 @@
-import { FaHtml5, FaCss3Alt, FaReact, FaGitAlt, FaGithub, FaFigma, FaGraduationCap } from "react-icons/fa"
-import { SiJavascript, SiFirebase, SiTailwindcss, SiVite, SiVisualstudio } from "react-icons/si"
+import { FaHtml5, FaCss3Alt, FaReact, FaGitAlt, FaGithub, FaFigma, FaGraduationCap, FaNodeJs } from "react-icons/fa"
+import { SiJavascript, SiFirebase, SiTailwindcss, SiVite, SiMongodb, SiVisualstudio } from "react-icons/si"
 import { SlSpeech } from "react-icons/sl"
-import { MdDevices } from "react-icons/md"
+// import { MdDevices } from "react-icons/md"
 import { HiLightBulb } from "react-icons/hi"
 
 function Skills() {
@@ -29,17 +29,29 @@ function Skills() {
                     </figure>
                     <figcaption className="text-sm">JavaScript</figcaption>
                 </div>
-                <div className="grid mx-auto">
+                {/* <div className="grid mx-auto">
                     <figure className="text-5xl mx-auto">
                         <SiVisualstudio />
                     </figure>
                     <figcaption className="text-sm">VSCode</figcaption>
-                </div>
+                </div> */}
                 <div className="grid mx-auto">
                     <figure className="text-5xl mx-auto">
                         <FaReact />
                     </figure>
                     <figcaption className="text-sm">React</figcaption>
+                </div>
+                <div className="grid mx-auto">
+                    <figure className="text-5xl mx-auto">
+                        <FaNodeJs />
+                    </figure>
+                    <figcaption className="text-sm">Node.js</figcaption>
+                </div>
+                <div className="grid mx-auto">
+                    <figure className="text-5xl mx-auto">
+                        <SiMongodb />
+                    </figure>
+                    <figcaption className="text-sm">MongoDb</figcaption>
                 </div>
                 <div className="grid mx-auto">
                     <figure className="text-5xl mx-auto">
@@ -77,12 +89,12 @@ function Skills() {
                     </figure>
                     <figcaption className="text-sm">Figma</figcaption>
                 </div>
-                <div className="grid mx-auto">
+                {/* <div className="grid mx-auto">
                     <figure className="text-5xl mx-auto">
                         <MdDevices />
                     </figure>
                     <figcaption className="text-sm">Responsive Design</figcaption>
-                </div>
+                </div> */}
             </div>
             <p className="mb-5 mt-5 text-base-content ">The following are some of the key professional and soft skills I have developed along my journey:</p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-start">
