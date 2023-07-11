@@ -1,5 +1,4 @@
 import toeflScreen from '../assets/toeflScreen.webp'
-import pokereactScreen from '../assets/pokereactScreen.webp'
 import lemonScreen from '../assets/lemonScreen.webp'
 import quizScreen from '../assets/quizScreen.webp'
 import { FaGithub } from "react-icons/fa"
@@ -102,39 +101,7 @@ const projects = [
         </div>
       </>
     ),
-  },
-  // {
-  //   id: "project4",
-  //   image: pokereactScreen,
-  //   title: "PokéReact",
-  //   description: "Fetches data from PokeApi and displays as a classic Pokémon card",
-  //   badges: ["React", "Tailwind CSS", "RESTful API"],
-  //   modalContent: (
-  //     <>
-  //       <h3 className="text-2xl font-bold text-center text-primary mb-10">PokéReact</h3>
-  //       <div className='grid lg:grid-cols-2 gap-8 mb-10'>
-  //         <div className='grid items-center justify-center'>
-  //           <h4 className="text-lg font-bold text-info">Brief</h4>
-  //           <p className="py-4">A web app for practicing TOEFL independent speaking questions. The user can select a question from a list, choose a question at random, or input their own question. The question will appear on screen along with a &#40;customizable&#41; timer. Users have the option of allowing the app to access their microphone, recording their answer and displaying the three most recent recordings for them to download.</p>
-  //           <a className="btn normal-case btn-primary w-48" href="https://toefl-speaking.netlify.app/" target="_blank">Visit site</a>
-  //         </div>
-  //         <a href="https://toefl-speaking.netlify.app/" target="_blank" className='order-first lg:order-last'>
-  //           <img className="drop-shadow-lg" src={toeflScreen} alt="TOEFL Speaking App"/>
-  //         </a>
-  //       </div>
-  //       <div>
-  //         <h4 className="text-lg font-bold text-info">Story</h4>
-  //         <p className="py-4">As a TOEFL teacher, I often have students practice timed speaking exercises in the classroom, but the usual method of setting up a timer and writing a question on the board is inefficient. I wanted to create a tool that would allow teachers to use a classroom PC and projector to quickly load a question or compose their own. 
-  //         <br/><br/>
-  //         As motivated students often ask how they can improve their speaking skills at home, I decided to extend the project so it would be student-friendly. I designed the interface to be simple to understand and use. I also added a 'tips' section to give students advice on how to complete the task.
-  //         <br/><br/>
-  //         I learned a lot through making this project. At first, refreshing the page when it displayed a question would return users to the question select page, requiring them to choose a question from scratch. I implemented <code className='text-primary'>react-router</code> to deal with this issue and allow back-button functionality. I also made use of <code className='text-primary'>session-storage</code> to keep the currently-selected question in memory.
-  //         <br/><br/>
-  //         To gain experience with APIs I choose to move the question data to a separate <code className='text-primary'>static API</code> that I could add questions to at a later date. I am currently in the process of increasing the number of stock questions by feeding appropriate prompts to <code className='text-primary'>ChatGPT</code> and curating the results.</p>
-  //       </div>
-  //     </>
-  //   ),
-  // },
+  }
 ]
 
 function Project({ project }) {
